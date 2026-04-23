@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b); /* Fondo oscuro con degradado */
+    color: #e2e8f0;
+}
+
+/* HEADER */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #0f172a, #1e40af);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.header h1 {
+    letter-spacing: 2px;
+}
+
+/* NAV */
+.barraN {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.barraN a {
+    color: #cbd5f5;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* Línea animada debajo */
+.barraN a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #38bdf8;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.barraN a:hover {
+    color: #38bdf8;
+}
+
+.barraN a:hover::after {
+    width: 100%;
+}
+
+/* MAIN */
+main {
+    margin-top: 100px;
+    padding: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* SECCIONES */
+section {
+    height: auto;
+    width: auto;
+    margin-bottom: 80px;
+    padding: 25px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+section h2 {
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+/* GALERÍA */
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.item {
+    background: #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.item img {
+    width: 100%;
+    display: block;
+}
+
+.item:hover {
+    transform: scale(1.07);
+    box-shadow: 0 10px 25px rgba(56,189,248,0.4); /* Glow azul */
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #0f172a, #1e40af);
+    color: #cbd5f5;
+    margin-top: 40px;
+}
